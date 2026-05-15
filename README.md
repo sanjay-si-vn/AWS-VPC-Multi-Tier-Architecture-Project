@@ -22,17 +22,8 @@ The project focuses on core AWS networking concepts including:
 
 # Architecture Diagram
 
-Internet
-   ↓
-Internet Gateway
-   ↓
-Public Subnet
-   ├── Public EC2 (NGINX / Bastion Host)
-   └── NAT Gateway
-
-Private Subnet
-   └── Private EC2
-
+Internet ➡️ Internet Gateway➡️ Public Subnet➡️ Public EC2 (NGINX / Bastion Host)➡️ NAT Gateway
+➡️ Private Subnet➡️ Private EC2 
 
 ## Service and purpose
 
