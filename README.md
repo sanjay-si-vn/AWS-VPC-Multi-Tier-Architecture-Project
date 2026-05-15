@@ -32,77 +32,68 @@ Public Subnet
 
 Private Subnet
    └── Private EC2
-```
 
----
 
-# Services Used
+## Service and purpose
 
-| Service          | Purpose                              |
-| ---------------- | ------------------------------------ |
-| Amazon VPC       | Isolated cloud network               |
-| Public Subnet    | Internet-facing resources            |
-| Private Subnet   | Internal secure resources            |
-| Internet Gateway | Internet access for public subnet    |
-| NAT Gateway      | Outbound internet for private subnet |
-| Route Tables     | Traffic routing                      |
-| EC2              | Virtual servers                      |
-| Security Groups  | Firewall rules                       |
-| NGINX            | Web server hosting                   |
+ Amazon VPC       : Isolated cloud network               
+ Public Subnet    : Internet-facing resources            
+ Private Subnet   : Internal secure resources            
+ Internet Gateway : Internet access for public subnet    
+ NAT Gateway      : Outbound internet for private subnet 
+ Route Tables     : Traffic routing                      
+ EC2              : Virtual servers                      
+ Security Groups  : Firewall rules                       
+ NGINX            : Web server hosting                   
 
----
 
 # Project Workflow
 
-## 1. Created Custom VPC
+ 1. Created Custom VPC
 
 * Configured custom CIDR block
 * Designed isolated AWS network
 
-## 2. Created Public & Private Subnets
+ 2. Created Public & Private Subnets
 
 * Public subnet for internet-facing resources
 * Private subnet for backend/internal resources
 
-## 3. Configured Internet Gateway
+ 3. Configured Internet Gateway
 
 * Attached IGW to VPC
 * Enabled public internet connectivity
 
-## 4. Configured Route Tables
+ 4. Configured Route Tables
 
-### Public Route Table
-
+*Public Route Table
 0.0.0.0/0 → Internet Gateway
 
-### Private Route Table
-
+*Private Route Table
 0.0.0.0/0 → NAT Gateway
 
-## 5. Launched Public EC2
+ 5. Launched Public EC2
 
 * Configured SSH access
 * Installed and configured NGINX
 * Hosted default NGINX webpage
 
-## 6. Configured NAT Gateway
+ 6. Configured NAT Gateway
 
 * Allowed outbound internet access from private subnet
 * Implemented secure private networking concept
 
-## 7. Created Private EC2
+ 7. Created Private EC2
 
 * Disabled public IP
 * Implemented private subnet architecture
 * Configured internal communication concepts
 
-## 8. Security Group Configuration
+ 8. Security Group Configuration
 
 * Controlled SSH access
 * Managed HTTP traffic
 * Practiced cloud firewall troubleshooting
-
----
 
 # Key Learning Outcomes
 
@@ -119,8 +110,6 @@ Through this project, I learned:
 * Internal VPC communication
 * Production-style infrastructure design
 
----
-
 # Real-World Relevance
 
 This architecture reflects how modern production systems are designed:
@@ -130,7 +119,6 @@ This architecture reflects how modern production systems are designed:
 * Controlled access using security groups
 * Secure outbound internet via NAT Gateway
 
----
 
 # Technologies Used
 
@@ -144,7 +132,6 @@ This architecture reflects how modern production systems are designed:
 * NGINX
 * SSH
 
----
 
 # Future Improvements
 
@@ -158,7 +145,6 @@ Planned enhancements:
 * Docker deployment
 * Terraform automation
 
----
 
 # Author
 
